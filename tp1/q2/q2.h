@@ -4,13 +4,24 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-typedef struct t_matrice {
+typedef struct t_matrix {
     int c;
     int l;
-    float **mat;
-} t_matrice;
+    int **mat;
+} t_matrix;
 
-void alloc2dmat(t_matrice *t_mat);
+int min(int a, int b);
+
+void alloc_mat(t_matrix *matrix);
+
+void fill_mat(t_matrix *matrix);
+
+void display_mat(t_matrix *matrix);
+
+t_matrix *product_mat(t_matrix *matrix1, t_matrix *matrix2);
+
+void free_mat(t_matrix *matrix);
+
 
 #endif //TP_Q2_H
 
